@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salih Gun - App Policies</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .policy-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .policy-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        .policy-link.privacy {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .policy-link.terms {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+        }
+        .policy-link.terms:hover {
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #667eea;
+        }
+        .footer {
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .example-links {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        .example-links code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #e91e63;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 30px 20px;
+            }
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Salih Gun</h1>
+        <p class="subtitle">Mobile App Policies</p>
+        
+        <div class="info">
+            <h3>🛡️ Universal Privacy & Terms</h3>
+            <p>Dynamic policy pages for all mobile applications. Simply add the app name as a URL parameter to customize the content.</p>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html" class="policy-link privacy">🔒 Privacy Policy</a>
+            <a href="terms.html" class="policy-link terms">📋 Terms & Conditions</a>
+        </div>
+
+        <div class="example-links">
+            <h4>📝 Example Usage:</h4>
+            <p><code>privacy.html?app=ListenTTS</code></p>
+            <p><code>terms.html?app=YourAppName</code></p>
+        </div>
+
+        <div class="footer">
+            <p>🚀 Built for seamless app store compliance</p>
+            <p>✉️ Contact: <strong>support@salihgun.dev</strong></p>
+            <p>📅 Auto-updating effective dates</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive effects
+        document.querySelectorAll('.policy-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
