@@ -3,549 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salih Gun - Mobile App Policies</title>
-    <meta name="description" content="Professional Privacy Policy and Terms of Service pages for mobile applications. App Store & Google Play compliant.">
+    <title>Salih Gun - Policies</title>
     <style>
-        * {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.3s forwards;
         }
-
-        .hero .subtitle {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.6s forwards;
+        .container {
+            text-align: center;
+            max-width: 500px;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
-
-        .hero .description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.9s forwards;
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-
-        .cta-buttons {
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .links {
             display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 1s ease 1.2s forwards;
         }
-
-        .btn {
+        .link {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
         }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        .link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
         }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-3px);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e9ecef;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .feature-card p {
-            color: #7f8c8d;
-            line-height: 1.6;
-        }
-
-        /* How It Works Section */
-        .how-it-works {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            font-weight: bold;
-            line-height: 60px;
-            margin-bottom: 20px;
-        }
-
-        .step h3 {
-            font-size: 1.3rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .step p {
-            color: #7f8c8d;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .pricing-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            max-width: 400px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e9ecef;
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #667eea;
-            margin: 20px 0;
-        }
-
-        .price-features {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .price-features li {
-            padding: 8px 0;
-            color: #7f8c8d;
-        }
-
-        .price-features li:before {
-            content: '✓';
-            color: #27ae60;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .contact-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            margin: 0 auto;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-item {
-            margin: 20px 0;
-            font-size: 1.1rem;
-        }
-
-        .contact-item strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* Footer */
         .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.7;
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
             }
-            
-            .hero .subtitle {
-                font-size: 1.1rem;
+            h1 {
+                font-size: 2em;
             }
-            
-            .cta-buttons {
+            .links {
                 flex-direction: column;
                 align-items: center;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .steps {
-                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>🚀 Mobile App Policies</h1>
-            <p class="subtitle">Professional & Compliant</p>
-            <p class="description">
-                Dynamic Privacy Policy and Terms of Service pages for your mobile applications. 
-                App Store & Google Play compliant, beautifully designed, and ready to deploy.
-            </p>
-            <div class="cta-buttons">
-                <a href="privacy.html" class="btn btn-primary">📋 View Privacy Policy</a>
-                <a href="terms.html" class="btn btn-secondary">📋 View Terms & Conditions</a>
-            </div>
+    <div class="container">
+        <h1>📋 App Policies</h1>
+        <p>Privacy Policy and Terms of Service for mobile applications</p>
+        
+        <div class="links">
+            <a href="/privacy.html" class="link">🔒 Privacy Policy</a>
+            <a href="/terms.html" class="link">📋 Terms & Conditions</a>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>✨ Why Choose Our Policies?</h2>
-                <p>Professional, compliant, and beautifully designed policy pages for all your mobile apps</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">🎯</span>
-                    <h3>Dynamic Content</h3>
-                    <p>One set of policies, unlimited apps. Simply add your app name as a URL parameter and the content updates automatically.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">📱</span>
-                    <h3>App Store Compliant</h3>
-                    <p>Fully compliant with Apple App Store and Google Play Store requirements. Pass review every time.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🎨</span>
-                    <h3>Beautiful Design</h3>
-                    <p>Professional, mobile-responsive design that looks great on all devices and builds user trust.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">⚡</span>
-                    <h3>Easy Integration</h3>
-                    <p>Simple URL structure makes it easy to integrate with your app store submissions and app settings.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🔒</span>
-                    <h3>Privacy Focused</h3>
-                    <p>Comprehensive privacy protection coverage including GDPR, CCPA, and other major privacy regulations.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🔄</span>
-                    <h3>Auto-Updated</h3>
-                    <p>Effective dates automatically update to current date, ensuring your policies are always current.</p>
-                </div>
-            </div>
+        
+        <div class="footer">
+            <p>📧 support@salihgun.dev</p>
         </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>🔧 How It Works</h2>
-                <p>Simple 3-step process to get your app policies live</p>
-            </div>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Deploy Pages</h3>
-                    <p>Deploy the policy pages to your preferred hosting platform (Netlify, Vercel, GitHub Pages)</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Add App Name</h3>
-                    <p>Use URL parameters to customize content: <code>yoursite.com/privacy.html?app=YourApp</code></p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Submit to Stores</h3>
-                    <p>Use the generated URLs in your App Store and Google Play submissions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>💰 Simple Pricing</h2>
-                <p>Professional policies for all your apps</p>
-            </div>
-            
-            <div class="pricing-card">
-                <h3>Complete Package</h3>
-                <div class="price">FREE</div>
-                <ul class="price-features">
-                    <li>Privacy Policy Page</li>
-                    <li>Terms & Conditions Page</li>
-                    <li>Dynamic App Name Support</li>
-                    <li>Mobile Responsive Design</li>
-                    <li>App Store Compliant</li>
-                    <li>Auto-Updating Dates</li>
-                    <li>Professional Styling</li>
-                    <li>Easy Deployment</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>📧 Get in Touch</h2>
-            <p>Need custom policies or have questions? We're here to help!</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📧 Email Support</strong>
-                    <a href="mailto:support@salihgun.dev" style="color: white; text-decoration: none;">
-                        support@salihgun.dev
-                    </a>
-                </div>
-                
-                <div class="contact-item">
-                    <strong>⚡ Response Time</strong>
-                    Usually within 24 hours
-                </div>
-                
-                <div class="contact-item">
-                    <strong>🌍 Available</strong>
-                    Worldwide Support
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Salih Gun. All rights reserved. | Built with ❤️ for mobile developers</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe feature cards and steps
-        document.querySelectorAll('.feature-card, .step').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+    </div>
 </body>
 </html>
